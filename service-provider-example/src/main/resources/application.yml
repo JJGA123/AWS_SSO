@@ -1,0 +1,20 @@
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          samlexample:
+            signing:
+              credentials:
+                - private-key-location: "classpath:credentials/private.key"
+                  certificate-location: "classpath:credentials/public.cer"
+            identityprovider:
+              entity-id: https://portal.sso.eu-west-1.amazonaws.com/saml/assertion/MTcyMzgzNjU3MDcwX2lucy1kMjdmNTM2YWZkMTVhZWY5 #URL de emisor de AWS SSO
+              singlesignon:
+                sign-request: false
+                url: https://d-936776d5e7.awsapps.com/start #
+              metadata-uri: https://portal.sso.eu-west-1.amazonaws.com/saml/metadata/MTcyMzgzNjU3MDcwX2lucy1kMjdmNTM2YWZkMTVhZWY5 #Archivo de metadatos SAML de AWS SSO
+# AWS SSO              
+# URL de ACS de la aplicación : http://f7d2-179-1-110-50.ngrok.io/login/saml2/sso/samlexample
+# Público SAML de la aplicación : http://f7d2-179-1-110-50.ngrok.io/saml2/service-provider-metadata/samlexample
+# Para concepto de prueba en otros puntos el proyecto fue descubierto en la red con ngrok

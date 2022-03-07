@@ -1,0 +1,17 @@
+body, html {
+  	height: 100%;
+}
+
+body {
+  	margin: 0;
+  	padding: 0;
+}
+
+.contenedor {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 100px;
+    padding-left: 100px;
+  	justify-content: center;
+    height: inherit;
+}
